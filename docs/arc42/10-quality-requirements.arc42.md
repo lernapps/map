@@ -105,7 +105,7 @@ metric: Monthly infrastructure cost = 0 EUR (GitHub Free/Pro tier only)
 
 ### No Third-Party Data Transfer
 
-A teacher opens the edugo landing page on a school network with a strict firewall that blocks
+A teacher opens the lernapps.net landing page on a school network with a strict firewall that blocks
 all non-whitelisted external hosts. All page assets load successfully. No requests are made to
 analytics services, font CDNs, tracking pixels, or social media widgets. The browser's network
 log shows requests only to the GitHub Pages CDN domain and no others.
@@ -115,7 +115,7 @@ log shows requests only to the GitHub Pages CDN domain and no others.
 id: qs-no-third-party-data
 title: No third-party data transfer on page load
 quality: qg-dsgvo-safety
-stimulus: Teacher opens edugo on a school network with external host blocking
+stimulus: Teacher opens lernapps.net on a school network with external host blocking
 response: All assets load; no requests to third-party domains
 metric: Zero network requests to non-GitHub Pages domains in production build
 :::
@@ -123,7 +123,7 @@ metric: Zero network requests to non-GitHub Pages domains in production build
 
 ### Fork and Deploy
 
-A developer forks the edugo GitHub repository, makes no configuration changes other than
+A developer forks the lernapps.net GitHub repository, makes no configuration changes other than
 enabling GitHub Pages in the fork's settings, and triggers the deploy workflow. A working
 instance of the platform is live at their GitHub Pages URL within 30 minutes of forking.
 
@@ -140,7 +140,7 @@ metric: Time from fork to live instance < 30 minutes; zero configuration beyond 
 
 ### First Submission Under 15 Minutes
 
-A teacher who has never submitted a GitHub PR before opens edugo, finds a gap in the capability
+A teacher who has never submitted a GitHub PR before opens lernapps.net, finds a gap in the capability
 map, clicks "Submit a tool", and completes a valid registry entry. The entry passes schema
 validation on the first attempt. Total elapsed time from clicking "Submit a tool" to a
 merged PR (excluding maintainer review time) is under 15 minutes.
@@ -158,7 +158,7 @@ metric: Time from "Submit a tool" click to valid PR opened < 15 minutes
 
 ### Mobile Landing Page Load
 
-A teacher opens the edugo landing page on a mid-range Android phone on a 4G connection (20 Mbps,
+A teacher opens the lernapps.net landing page on a mid-range Android phone on a 4G connection (20 Mbps,
 50ms RTT). The Largest Contentful Paint (LCP) is under 1.5 seconds. The headline, problem
 statement, and primary call-to-action are visible without scrolling and without JavaScript.
 

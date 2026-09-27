@@ -6,9 +6,9 @@ Arc42 chapter 2. Non-negotiable boundaries on the architecture and its evolution
 
 ## No Server — Static Deployment Only
 
-edugo Phase 1 must deploy with no server, no database, and no backend runtime. All data lives in
+lernapps.net Phase 1 must deploy with no server, no database, and no backend runtime. All data lives in
 structured files in the GitHub repository. All dynamic behaviour runs in the browser. This
-constraint is intentional: it models the DSGVO-safe, zero-operating-cost architecture that edugo
+constraint is intentional: it models the DSGVO-safe, zero-operating-cost architecture that lernapps.net
 recommends for app builders in the ecosystem. A platform that preaches "frontend-only is safe"
 must itself be frontend-only.
 
@@ -42,7 +42,7 @@ source: Product decision KD-06; requirements.md §8; architecture discussion 202
 
 The platform itself must be fully DSGVO-compliant. No third-party trackers. No analytics services
 that transfer data outside the EU. No user accounts. No cookies beyond what the browser requires
-for navigation. This is both a legal obligation and a product signal: if edugo demands DSGVO
+for navigation. This is both a legal obligation and a product signal: if lernapps.net demands DSGVO
 compliance from the tools it lists, it must demonstrate it itself.
 
 ```arc42

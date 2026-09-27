@@ -1,7 +1,7 @@
 # Deployment View
 
 <!--
-Arc42 chapter 7. The infrastructure and deployment mapping for edugo.
+Arc42 chapter 7. The infrastructure and deployment mapping for lernapps.net.
 -->
 
 The deployment topology is intentionally minimal. There is one environment (production) and one

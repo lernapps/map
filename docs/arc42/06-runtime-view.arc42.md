@@ -1,7 +1,7 @@
 # Runtime View
 
 <!--
-Arc42 chapter 6. Representative runtime scenarios for edugo.
+Arc42 chapter 6. Representative runtime scenarios for lernapps.net.
 -->
 
 Three scenarios cover the architecturally significant flows: a teacher finding and assessing a
@@ -10,7 +10,7 @@ merged PR.
 
 ## Scenario 1: Teacher Discovers a Tool
 
-A classroom teacher arrives at edugo, filters the registry for tools that are active-learning
+A classroom teacher arrives at lernapps.net, filters the registry for tools that are active-learning
 focused and DSGVO-green for primary school maths, and follows a link to an external tool. The
 entire flow is static-page rendering and client-side JavaScript — no server call is made after
 the initial page load.
@@ -19,7 +19,7 @@ the initial page load.
 :::runtime-scenario
 id: rs-teacher-discovery
 title: Teacher discovers a tool via the registry
-trigger: Teacher opens edugo from a link shared in Bildungstwitter
+trigger: Teacher opens lernapps.net from a link shared in Bildungstwitter
 involves: bb-website, bb-capability-map, bb-registry
 :::
 ```
@@ -47,12 +47,12 @@ sequenceDiagram
   Teacher->>bb_reg: Click capability node — see linked registry entries
   bb_reg-->>Teacher: Registry entries filtered client-side
   Teacher->>Teacher: Reads DSGVO badge, evidence level, trust signals
-  Teacher->>Teacher: Clicks outbound link — external tool (leaves edugo)
+  Teacher->>Teacher: Clicks outbound link — external tool (leaves lernapps.net)
 ```
 
 ## Scenario 2: Contributor Submits an Entry
 
-A developer has built a Vue-based interactive grammar trainer. They open edugo, find the
+A developer has built a Vue-based interactive grammar trainer. They open lernapps.net, find the
 relevant capability gap in the map, click "Submit a tool", and are taken to a pre-filled
 GitHub PR template. They complete the YAML frontmatter fields (or use the AI-assisted form
 in Phase 2), open the PR, and a maintainer reviews and merges it. The CI/CD pipeline then
@@ -102,7 +102,7 @@ sequenceDiagram
 
 Every PR that touches `data/` triggers schema validation. Every merge to `main` triggers a
 full build and deploy. This is the only "server-side" logic in the system — and it runs
-entirely within GitHub's infrastructure, not on any edugo-owned server.
+entirely within GitHub's infrastructure, not on any lernapps.net-owned server.
 
 ```arc42
 :::runtime-scenario

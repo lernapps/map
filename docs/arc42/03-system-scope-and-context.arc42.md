@@ -1,10 +1,10 @@
 # System Scope and Context
 
 <!--
-Arc42 chapter 3. The system boundary and all external parties that interact with edugo.
+Arc42 chapter 3. The system boundary and all external parties that interact with lernapps.net.
 -->
 
-The edugo platform sits at the intersection of four groups: people who build educational tools,
+The lernapps.net platform sits at the intersection of four groups: people who build educational tools,
 people who adopt them in classrooms, GitHub as the persistence and contribution infrastructure,
 and the broader web as the deployment surface. Everything inside the system boundary is a
 static site rendered in the browser from files in the repository. There is no server component
@@ -97,7 +97,7 @@ requires: if-docs-nav, if-arc42-docs-read
 
 GitHub acts as the sole backend: it hosts the repository, runs CI/CD via GitHub Actions, serves
 the static site via GitHub Pages, and mediates all contributions through the Pull Request workflow.
-edugo has no control over GitHub's availability or API changes. GitHub is also the contribution
+lernapps.net has no control over GitHub's availability or API changes. GitHub is also the contribution
 identity layer — contributors are GitHub users.
 
 ```arc42
@@ -112,8 +112,8 @@ requires: if-repo-push
 
 ## External Educational Tools
 
-Third-party tools and apps that are registered in the edugo registry. edugo links to them but
-does not host, control, or proxy them. The connection is an outbound hyperlink; edugo has no
+Third-party tools and apps that are registered in the lernapps.net registry. lernapps.net links to them but
+does not host, control, or proxy them. The connection is an outbound hyperlink; lernapps.net has no
 runtime dependency on these tools.
 
 ```arc42
@@ -121,7 +121,7 @@ runtime dependency on these tools.
 id: actor-external-tools
 title: External Educational Tools
 type: system
-description: Third-party apps registered in the registry; linked but not hosted by edugo
+description: Third-party apps registered in the registry; linked but not hosted by lernapps.net
 requires: if-registry-read
 :::
 ```
@@ -139,7 +139,7 @@ aliases: actor_contributor=actor-contributor, actor_adopter=actor-adopter, actor
 
 ```mermaid
 graph LR
-  subgraph edugo["edugo (static site + data repository)"]
+  subgraph lernapps["lernapps.net (static site + data repository)"]
     bb_website["Website / Landing Page"]
     bb_cap["Capability Map"]
     bb_reg["Solution Registry"]
@@ -154,6 +154,6 @@ graph LR
   actor_signal["Signal Reader"] -->|if-capability-map-read| bb_cap
   actor_signal -->|if-registry-read| bb_reg
   actor_arc42["Arc42 Reader"] -->|if-arc42-docs-read| bb_arc42
-  actor_github["GitHub"] -->|if-repo-push| edugo
+  actor_github["GitHub"] -->|if-repo-push| lernapps
   bb_reg -->|outbound link| actor_tools["External Tools"]
 ```

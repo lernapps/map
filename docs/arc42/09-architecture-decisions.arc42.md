@@ -6,7 +6,7 @@ Arc42 chapter 9. Significant architectural choices with rationale and rejected a
 
 ## ADR-01: Git-hosting Provider as Backend — GitHub First, Provider-Agnostic Data Layer
 
-**Context:** edugo needs persistent storage for capability nodes and registry entries, a
+**Context:** lernapps.net needs persistent storage for capability nodes and registry entries, a
 contribution workflow, CI/CD execution, and static site hosting. Options include a managed
 database, a headless CMS, a serverless backend, or storing all data as files in a Git repository
 hosted by a Git forge (GitHub, GitLab, Gitea, Forgejo, delta.dev, etc.).
@@ -20,7 +20,7 @@ forge-agnostic so the platform can be migrated to or replicated on any Git-hosti
 **Rationale — why Git forge over a server:** A server-side backend introduces operating cost,
 a DSGVO data processing surface, a procurement barrier for forks, and operational complexity.
 None of these are acceptable for a platform that must be zero-cost, fully forkable, and
-DSGVO-clean by design. A Git forge also demonstrates the architecture pattern edugo recommends:
+DSGVO-clean by design. A Git forge also demonstrates the architecture pattern lernapps.net recommends:
 frontend-only, no persistent user data, forkable at zero cost.
 
 **Rationale — why GitHub first:** GitHub has the largest developer community in the world and
@@ -152,7 +152,7 @@ files (`.arc42.md`) live in `docs/arc42/` and are included in the VitePress buil
 Markdown pages.
 
 **Rationale:** VitePress produces a polished, navigable docs site that integrates visually with
-the rest of the edugo brand. Arc42 CLI provides structural validation that plain Markdown
+the rest of the lernapps.net brand. Arc42 CLI provides structural validation that plain Markdown
 rendering cannot. The two tools complement rather than compete: arc42 CLI enforces correctness,
 VitePress enforces presentation. The `.arc42.md` extension is treated as Markdown by VitePress,
 so no additional VitePress plugin is needed.

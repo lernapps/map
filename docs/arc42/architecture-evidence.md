@@ -1,14 +1,14 @@
-# Architecture Evidence — edugo
+# Architecture Evidence — lernapps.net
 
 > Traceability file for the arc42 architecture model. Not a chapter file — not parsed by arc42 validator.
 > Last updated: 2026-09-23
 
 | Source path:line, symbol, or command | Derived fact or relationship | Used in | Confidence | Open question / human decision |
 | --- | --- | --- | --- | --- |
-| `.vibe/docs/requirements.md:8` | Vision: edugo is an infrastructure layer, not a content platform or LMS | ch.1 / intro | high | — |
+| `.vibe/docs/requirements.md:8` | Vision: lernapps.net is an infrastructure layer, not a content platform or LMS | ch.1 / intro | high | — |
 | `.vibe/docs/requirements.md:47` | Four platform jobs: map capabilities, ensure quality, provide guidelines, make agentic creation ecosystem-connected | ch.1 / intro, ch.4 / strategy | high | — |
 | `.vibe/docs/requirements.md:58-68` | Capability map structure: nodes, status, linked solutions, gap signals | ch.5 / bb-capability-map | high | — |
-| `.vibe/docs/requirements.md:76-80` | Frontend-only apps are structurally DSGVO-safe; edugo rewards this with a visible badge | ch.2 / con-no-server, ch.8 / concept-dsgvo-by-design | high | — |
+| `.vibe/docs/requirements.md:76-80` | Frontend-only apps are structurally DSGVO-safe; lernapps.net rewards this with a visible badge | ch.2 / con-no-server, ch.8 / concept-dsgvo-by-design | high | — |
 | `.vibe/docs/requirements.md:199-203` | GitHub is the sole backend in Phase 1: all data in files, contributions via PRs | ch.2 / con-github-backend, ch.7 / deploy | high | — |
 | `.vibe/docs/requirements.md:183-195` | Phase 0 = landing page (vaporware); Phase 1 = frontend-only use cases on static infra | ch.1 / intro, ch.4 / strategy | high | — |
 | `.vibe/docs/requirements.md:110-127` | Four personas: Contributor (Builder), Adopter (Teacher), Navigator, Signal Reader | ch.3 / actors | high | — |
@@ -17,7 +17,7 @@
 | `.vibe/docs/requirements.md:145-152` | Active/Passive taxonomy removed from architecture model — deferred indefinitely | — | — | Removed from ch.8 and ch.12 per product owner decision |
 | `.vibe/docs/requirements.md:153-158` | Trust signals: DSGVO status (green/amber/red/unknown), evidence level, architecture compliance badge | ch.8 / concept-trust-signals | high | — |
 | `.vibe/docs/requirements.md:169-173` | Fork & composability: fork relationships visible, one-click fork for open-source entries | ch.8 / concept-composability | high | — |
-| `.vibe/development-plan.md:KD-06` | GitHub as backend is a feature, not a constraint: it models the pattern edugo recommends | ch.4 / strategy | high | — |
+| `.vibe/development-plan.md:KD-06` | GitHub as backend is a feature, not a constraint: it models the pattern lernapps.net recommends | ch.4 / strategy | high | — |
 | `agent inference` | Vite+ (vp CLI) chosen as unified toolchain; Vue 3 as frontend framework | ch.4 / strategy, ch.5 / building blocks | high | Confirmed by product owner in architecture discussion |
 | `agent inference` | UnoCSS chosen for styling; GitHub Pages for deployment | ch.4 / strategy, ch.7 / deploy | high | Confirmed by product owner |
 | `agent inference` | Flat repo structure (no monorepo packages); VitePress for docs at `docs/`; arc42 sources in `docs/arc42/` | ch.5 / building blocks, ch.7 / deploy | high | Confirmed by product owner |

@@ -1,10 +1,10 @@
 # Building Blocks
 
 <!--
-Arc42 chapter 5. The static decomposition of edugo into building blocks and their interfaces.
+Arc42 chapter 5. The static decomposition of lernapps.net into building blocks and their interfaces.
 -->
 
-edugo is a single deployable unit — a static site built from one repository. The building blocks
+lernapps.net is a single deployable unit — a static site built from one repository. The building blocks
 below are logical separations within that unit, not independently deployed services. They share
 a build pipeline and a deployment target (GitHub Pages), but each has distinct responsibilities,
 data sources, and rendering concerns.
@@ -20,7 +20,7 @@ aliases: bb_website=bb-website, bb_cap=bb-capability-map, bb_reg=bb-registry, bb
 
 ```mermaid
 graph TD
-  subgraph edugo["edugo — single deployable unit"]
+  subgraph lernapps["lernapps.net — single deployable unit"]
     bb_website["Website / Landing Page"]
     bb_cap["Capability Map"]
     bb_reg["Solution Registry"]
@@ -42,7 +42,7 @@ graph TD
 
 ## Website / Landing Page
 
-The primary narrative surface of edugo. Tells the story of the problem (PISA 2026, isolated
+The primary narrative surface of lernapps.net. Tells the story of the problem (PISA 2026, isolated
 innovators, passive consumption), the vision (capability map + trusted ecosystem), and the
 mechanism (cheap creation + quality layer). Phase 0 delivers this as a polished static page
 with no functional registry or map. It must be compelling enough to generate genuine interest
@@ -115,7 +115,7 @@ Responsibility: render capability nodes from data files; show coverage status; l
 entries; surface gap signals; provide a browsable and filterable view.
 
 ```arc42
-:::ignore W018 bb-website, bb-capability-map, and bb-registry are co-located Vue components in a flat SPA under src/. Each has a more specific path than src/ to make implementation traceability meaningful, but paths naturally overlap. There is no parent building-block because edugo has no sub-module hierarchy — all three are peer components of the same application.
+:::ignore W018 bb-website, bb-capability-map, and bb-registry are co-located Vue components in a flat SPA under src/. Each has a more specific path than src/ to make implementation traceability meaningful, but paths naturally overlap. There is no parent building-block because lernapps.net has no sub-module hierarchy — all three are peer components of the same application.
 :::
 ```
 
@@ -270,7 +270,7 @@ path: docs
 
 VitePress-rendered documentation covering the arc42 architecture (sourced from `docs/arc42/`),
 contribution guidelines, builder patterns, and architecture decisions. This building block
-is the vehicle for edugo's third platform job: providing architecture guidelines to app builders.
+is the vehicle for lernapps.net's third platform job: providing architecture guidelines to app builders.
 Arc42 CLI is used for authoring and validation of the architecture documents; VitePress renders
 them alongside other documentation pages.
 

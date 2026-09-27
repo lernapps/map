@@ -1,20 +1,20 @@
 # Introduction and Goals
 
 <!--
-Arc42 chapter 1. The driving forces and requirements that shape the architecture of edugo.
+Arc42 chapter 1. The driving forces and requirements that shape the architecture of lernapps.net.
 -->
 
-> **Status 2026-09-27.** This architecture was written for *edugo*, which is now *lernapps*. It still
+> **Status 2026-09-27.** This architecture was written for *edugo*, which is now *lernapps.net*. It still
 > describes the whole former edugo platform. Since then the platform has been split across repos
 > ([ORGANIZATION.md](https://github.com/lernapps/.github/blob/main/ORGANIZATION.md)): this repo is the
 > **map**. The home page lives in `lernapps.github.io`, and vision and business model live in
 > `lernapps/docs`. The landing page and the business-model building block have been removed from the
 > model. The rest still has to be narrowed to the map
-> ([lernapps/map#5](https://github.com/lernapps/map/issues/5)). "edugo" below means lernapps.
+> ([lernapps/map#5](https://github.com/lernapps/map/issues/5)). Paths like `/edugo/` in ADRs are historical.
 
 ## 1.1 Requirements Overview
 
-edugo is the infrastructure layer that turns isolated educational micro-innovations into a coherent,
+lernapps.net is the infrastructure layer that turns isolated educational micro-innovations into a coherent,
 trustworthy ecosystem for German K-12 education. It does not host content, replace an LMS, or
 certify tools. It does four things:
 
@@ -25,7 +25,7 @@ certify tools. It does four things:
 3. **Provides architecture guidelines** — publishes patterns and scaffolding so new apps feel
    coherent and ecosystem-connected rather than re-inventing everything from scratch.
 4. **Makes agentic creation ecosystem-connected** — a developer who wants to build a new tool
-   starts from the capability map, uses edugo scaffolding, and submits to the registry when done.
+   starts from the capability map, uses lernapps.net scaffolding, and submits to the registry when done.
 
 The immediate delivery context is the PISA 2026 political moment: Germany reached its all-time
 PISA low, with one third of 15-year-olds below baseline in reading and mathematics. The landing

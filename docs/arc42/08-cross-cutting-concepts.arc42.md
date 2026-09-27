@@ -6,7 +6,7 @@ Arc42 chapter 8. Recurring patterns, standards, and rules applied across multipl
 
 ## DSGVO Safety by Design
 
-edugo embodies the same principle it recommends to app builders: structural safety over configuration safety.
+lernapps.net embodies the same principle it recommends to app builders: structural safety over configuration safety.
 
 The architecture structurally prevents data collection by removing the server-side surface
 entirely. There is no backend to store user data, no analytics scripts to include, and no

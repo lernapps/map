@@ -6,7 +6,7 @@ Arc42 chapter 11. Architectural risks and technical debt items, ordered by prior
 
 ## Capability Map Governance — Who Defines the Nodes?
 
-The capability map is edugo's strategic core, but the most politically sensitive design question
+The capability map is lernapps.net's strategic core, but the most politically sensitive design question
 is unresolved: who has the authority to add, modify, or deprecate capability nodes? If a
 small team controls this, the map reflects their perspective. If it is fully open, the map
 may fragment or be gamed. The KMK Kompetenzrahmen provides a starting taxonomy, but it is
@@ -75,7 +75,7 @@ mitigation: Forge-agnostic data layer (ADR-01); forge-specific config isolated t
 ## PISA 2026 Window Closing
 
 The PISA 2026 publication (September 2026) creates a narrow window of public discourse in
-Germany where edugo's narrative has maximum resonance. If the landing page (Phase 0) is not
+Germany where lernapps.net's narrative has maximum resonance. If the landing page (Phase 0) is not
 live within 4–6 weeks of the PISA publication, the political moment passes and the narrative
 anchor loses its urgency.
 

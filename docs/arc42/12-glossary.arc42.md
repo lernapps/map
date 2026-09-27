@@ -6,25 +6,25 @@ Arc42 chapter 12. Domain and technical terms with project-specific meanings.
 
 ## Capability Node
 
-A discrete educational outcome or activity tracked by the edugo capability map. Each node records its coverage status, links to registry entries that address it, and a gap signal if coverage is poor.
+A discrete educational outcome or activity tracked by the lernapps.net capability map. Each node records its coverage status, links to registry entries that address it, and a gap signal if coverage is poor.
 
 ```arc42
 :::glossary-term
 id: gl-capability-node
 title: Capability Node
-definition: A discrete educational outcome or activity that the edugo capability map tracks. Each node has a coverage status, links to registry entries that address it, and a gap signal if coverage is poor.
+definition: A discrete educational outcome or activity that the lernapps.net capability map tracks. Each node has a coverage status, links to registry entries that address it, and a gap signal if coverage is poor.
 :::
 ```
 
 ## Capability Map
 
-The strategic core of edugo. A living map of educational capabilities that shows what should exist, what does exist, and what is missing. Capability nodes are the units of the map; the gap view surfaces nodes with no or poor coverage as build opportunities.
+The strategic core of lernapps.net. A living map of educational capabilities that shows what should exist, what does exist, and what is missing. Capability nodes are the units of the map; the gap view surfaces nodes with no or poor coverage as build opportunities.
 
 ```arc42
 :::glossary-term
 id: gl-capability-map
 title: Capability Map
-definition: The strategic core of edugo — a living map of educational capabilities that shows what should exist, what does exist, and what is missing. Capability nodes are the units of the map. The gap view surfaces nodes with no or poor coverage as build opportunities.
+definition: The strategic core of lernapps.net — a living map of educational capabilities that shows what should exist, what does exist, and what is missing. Capability nodes are the units of the map. The gap view surfaces nodes with no or poor coverage as build opportunities.
 :::
 ```
 
@@ -102,13 +102,13 @@ definition: A filtered view of the capability map that shows only nodes with sta
 
 ## GitHub-as-backend
 
-The architectural pattern used by edugo in Phase 1: all persistent data lives as structured files in the GitHub repository; contributions are submitted as Pull Requests; deployments are triggered by pushes to `main`. There is no server-side database or API.
+The architectural pattern used by lernapps.net in Phase 1: all persistent data lives as structured files in the GitHub repository; contributions are submitted as Pull Requests; deployments are triggered by pushes to `main`. There is no server-side database or API.
 
 ```arc42
 :::glossary-term
 id: gl-github-backend
 title: GitHub-as-backend
-definition: The architectural pattern used by edugo in Phase 1: all persistent data lives as structured files in the GitHub repository; contributions are submitted as Pull Requests; deployments are triggered by pushes to main. There is no server-side database or API.
+definition: The architectural pattern used by lernapps.net in Phase 1: all persistent data lives as structured files in the GitHub repository; contributions are submitted as Pull Requests; deployments are triggered by pushes to main. There is no server-side database or API.
 :::
 ```
 
@@ -138,12 +138,12 @@ definition: The competency framework published by the Kultusministerkonferenz (S
 
 ## Vaporware-first
 
-The edugo delivery strategy: ship a polished landing page (Phase 0) before building any working infrastructure, to validate interest and generate community signal while the PISA 2026 political moment is alive.
+The lernapps.net delivery strategy: ship a polished landing page (Phase 0) before building any working infrastructure, to validate interest and generate community signal while the PISA 2026 political moment is alive.
 
 ```arc42
 :::glossary-term
 id: gl-vaporware-first
 title: Vaporware-first
-definition: The edugo delivery strategy: ship a polished landing page (Phase 0) before building any working infrastructure, to validate interest and generate community signal while the PISA 2026 political moment is alive.
+definition: The lernapps.net delivery strategy: ship a polished landing page (Phase 0) before building any working infrastructure, to validate interest and generate community signal while the PISA 2026 political moment is alive.
 :::
 ```

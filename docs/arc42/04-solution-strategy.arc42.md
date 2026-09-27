@@ -4,11 +4,11 @@
 Arc42 chapter 4. The coherent strategy that shapes the whole architecture.
 -->
 
-The architecture of edugo is shaped by one overriding insight: **the safest thing to build is
+The architecture of lernapps.net is shaped by one overriding insight: **the safest thing to build is
 also the easiest thing to build**. A frontend-only app with no backend has no data exfiltration
 surface. GitHub as a backend has no operating cost, no procurement barrier, and no DSGVO
 complexity. The architecture rewards the correct behavior by making it the path of least
-resistance — for edugo itself and for every app builder in the ecosystem.
+resistance — for lernapps.net itself and for every app builder in the ecosystem.
 
 ```arc42
 :::solution-strategy
