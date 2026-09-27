@@ -1,36 +1,28 @@
 import { test, expect } from '@playwright/test'
 
 /**
- * Smoke tests for the edugo platform.
+ * Smoke tests for the lernapps map.
  *
- * Run against the live site by default (baseURL = https://mrsimpson.github.io/edugo/).
+ * Run against the live site by default (baseURL = https://lernapps.github.io/map/).
  * Set BASE_URL to test a local preview build:
- *   BASE_URL=http://localhost:4173/edugo/ npx playwright test
+ *   BASE_URL=http://localhost:4173/map/ npx playwright test
  *
- * KD-33: The SPA uses hash routing deployed at /edugo/.
+ * KD-33: The SPA uses hash routing deployed at /map/.
  * We use relative paths (`./`) so that Playwright appends them to baseURL correctly:
- *   baseURL=https://mrsimpson.github.io/edugo/  +  ./#/catalog
- *   → https://mrsimpson.github.io/edugo/#/catalog  ✓
+ *   baseURL=https://lernapps.github.io/map/  +  ./#/catalog
+ *   → https://lernapps.github.io/map/#/catalog  ✓
  */
 
-test.describe('Landing page', () => {
-  test('loads and shows the hero headline', async ({ page }) => {
+test.describe('Root', () => {
+  test('redirects to the catalog', async ({ page }) => {
     await page.goto('./')
-    await expect(page).toHaveTitle(/edugo/i)
-    await expect(page.getByRole('heading', { level: 1 })).toContainText('Deutschlands Schulen')
+    await expect(page).toHaveTitle(/lernapps/i)
+    await expect(page).toHaveURL(/#\/catalog/)
   })
 
   test('skip navigation link is present', async ({ page }) => {
     await page.goto('./')
     await expect(page.locator('a[href="#main-content"]')).toBeAttached()
-  })
-
-  test('CTA links to /apps', async ({ page }) => {
-    await page.goto('./')
-    // Multiple "Tools entdecken" CTAs exist (one per persona tab) — check the first
-    const cta = page.getByRole('link', { name: /tools entdecken/i }).first()
-    await expect(cta).toBeVisible()
-    await expect(cta).toHaveAttribute('href', /#\/apps/)
   })
 })
 
@@ -85,13 +77,6 @@ test.describe('Registry entry detail', () => {
     await expect(page.getByRole('heading', { name: /Essay/i })).toBeVisible()
     // Markdown body rendered via marked — check at least one h2 in the body region
     await expect(page.locator('[aria-label="Beschreibung des Tools"] h2').first()).toBeVisible()
-  })
-})
-
-test.describe('VitePress docs', () => {
-  test('/docs/ serves a page', async ({ page }) => {
-    await page.goto('./docs/')
-    await expect(page).not.toHaveTitle(/404/i)
   })
 })
 

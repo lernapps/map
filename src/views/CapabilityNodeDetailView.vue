@@ -182,6 +182,6 @@ function dsgvoLabel(status: string) {
 
 const buildThisUrl = computed(() => {
   const id = route.params.id
-  return `https://github.com/mrsimpson/edugo/new/main/data/entries?filename=my-tool.md&value=---%0Aid%3A+my-tool%0Atitle%3A+%22Mein+Tool%22%0Acapabilities%3A%0A++-%20${id}%0A---`
+  return `https://github.com/lernapps/map/new/main/data/entries?filename=my-tool.md&value=---%0Aid%3A+my-tool%0Atitle%3A+%22Mein+Tool%22%0Acapabilities%3A%0A++-%20${id}%0A---`
 })
 </script>

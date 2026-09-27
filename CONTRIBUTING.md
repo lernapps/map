@@ -1,6 +1,6 @@
-# Beitragen zu edugo
+# Beitragen zur Karte von lernapps
 
-edugo lebt von Beiträgen aus der Praxis. Wenn du ein Lernergebnis kennst, das noch nicht auf der Karte ist, oder ein Tool, das eine Lücke füllt — leg einfach los. Du brauchst kein vollständiges Dossier. Ein guter erster Beitrag reicht.
+Die Karte lebt von Beiträgen aus der Praxis. Wenn du ein Lernergebnis kennst, das noch nicht auf der Karte ist, oder ein Tool, das eine Lücke füllt — leg einfach los. Du brauchst kein vollständiges Dossier. Ein guter erster Beitrag reicht.
 
 ---
 
@@ -119,11 +119,15 @@ Du brauchst kein lokales Setup. Alles geht über GitHub:
 ## Lokale Entwicklung
 
 ```bash
-git clone https://github.com/mrsimpson/edugo.git
-cd edugo
+git clone https://github.com/lernapps/map.git
+cd map
 npm install
 npm run validate-data   # prüft alle data/ Dateien gegen die Schemas
-npm run docs:dev        # startet VitePress lokal auf http://localhost:5173/edugo/
+npm run dev             # startet die Karte lokal auf http://localhost:5173/map/
 ```
 
 VS Code: Das Repo enthält eine `.vscode/settings.json`, die YAML-Frontmatter in `data/` Dateien automatisch gegen die Schemas validiert (wenn die [YAML Extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) installiert ist).
+
+---
+
+Allgemeine Regeln für alle Repositories von lernapps: [lernapps/.github](https://github.com/lernapps/.github/blob/main/CONTRIBUTING.md).

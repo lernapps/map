@@ -14,9 +14,9 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: process.env.CI ? 'github' : 'list',
   use: {
-    // The app is deployed at /edugo/ on GitHub Pages. BASE_URL can override
-    // for local preview: BASE_URL=http://localhost:4173/edugo/
-    baseURL: process.env.BASE_URL ?? 'https://mrsimpson.github.io/edugo/',
+    // The map is deployed at /map/ on GitHub Pages. BASE_URL can override
+    // for local preview: BASE_URL=http://localhost:4173/map/
+    baseURL: process.env.BASE_URL ?? 'https://lernapps.github.io/map/',
     trace: 'on-first-retry',
   },
   projects: [

@@ -119,5 +119,5 @@ const { filters, filteredEntries, dsgvoCounts, toggleDsgvo, setCapability, reset
   useRegistryFilters(entries)
 
 const newEntryUrl =
-  'https://github.com/mrsimpson/edugo/new/main/data/entries?filename=my-tool.md&message=feat%3A+add+registry+entry+my-tool&value=---%0Aid%3A+my-tool%0Atitle%3A+%22Mein+Tool%22%0Acapabilities%3A%0A++-%20%3Cnode-id%3E%0Ateaser%3A+%22Sch%C3%BCler+...%22%0Adsgvo%3A+unknown%0A---'
+  'https://github.com/lernapps/map/new/main/data/entries?filename=my-tool.md&message=feat%3A+add+registry+entry+my-tool&value=---%0Aid%3A+my-tool%0Atitle%3A+%22Mein+Tool%22%0Acapabilities%3A%0A++-%20%3Cnode-id%3E%0Ateaser%3A+%22Sch%C3%BCler+...%22%0Adsgvo%3A+unknown%0A---'
 </script>

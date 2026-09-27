@@ -125,5 +125,5 @@ const nodesWithCounts = computed(() => {
   )
 })
 
-const contributionUrl = 'https://github.com/mrsimpson/edugo/new/main/data/entries?filename=my-tool.md&value=---'
+const contributionUrl = 'https://github.com/lernapps/map/new/main/data/entries?filename=my-tool.md&value=---'
 </script>

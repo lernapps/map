@@ -1,79 +1,33 @@
-# edugo
+# map
 
-**The missing infrastructure layer for educational innovation.**
+The map of lernapps: what learners should be able to do (capability nodes), which learning apps help with it, and where apps are missing. Served at <https://lernapps.github.io/map/>.
 
----
+The map is the only place in lernapps that links to individual apps ([ORGANIZATION.md §3.3](https://github.com/lernapps/.github/blob/main/ORGANIZATION.md#33-how-apps-are-connected-by-link-from-the-map-nothing-else)).
 
-Germany's schools have devices. They have WiFi. After €11.5 billion in Digitalpakt funding, the hardware is there.
+## Contents
 
-What's missing is the software ecosystem — and the connective tissue that makes it trustworthy, findable, and buildable-upon.
+| Path | Purpose |
+|---|---|
+| `data/capabilities/` | Capability nodes: Markdown with YAML front matter |
+| `data/entries/` | Registry entries for apps (today maintained by hand; the manifest protocol replaces them, see [lernapps/.github#10](https://github.com/lernapps/.github/issues/10)) |
+| `schemas/` | Zod schemas; `schemas/generated/` holds the JSON Schemas, published at `/map/schemas/` |
+| `scripts/validate-data.ts` | Validates all data files against the schemas |
+| `src/` | The web app (Vue 3, hash routing) |
+| `e2e/` | Playwright smoke tests against the live site |
 
-PISA 2026 confirmed what teachers already knew: digital media in classrooms mostly means passive consumption. Students watch. Students click through. They don't create, don't solve, don't collaborate. The tools that would change this exist — built by motivated teachers, developers, and educators over weekends and evenings. But they're invisible. Isolated. Untrusted. Unreachable.
+## Develop
 
-edugo changes that.
+```bash
+npm ci
+npm run dev             # http://localhost:5173/map/
+npm run validate-data   # data against schemas
+npm run check-schemas   # generated JSON Schemas in sync
+npm run typecheck && npm run lint
+npm run build
+```
 
----
-
-## What edugo is
-
-A platform that turns isolated educational micro-innovations into a coherent, trustworthy ecosystem.
-
-**For builders** (teachers, developers, educators who build things):  
-A structured way to share what you've made — so it's findable, credible, and buildable-upon by others.
-
-**For teachers** (who need something that works next Monday):  
-A fast path to tools that are safe, active-learning-focused, and proven in real classrooms.
-
-**For the ecosystem** (everyone who cares about the future of education):  
-A living map of what educational capabilities exist, what's missing, and where the next thing should be built.
-
----
-
-## Core principles
-
-**Active over passive.**  
-The tools that matter most are the ones where students create, solve, collaborate, and reflect — not just receive. Every entry in edugo is classified on this axis. It is the first filter. It is the point.
-
-**The capability map, not a tool list.**  
-edugo doesn't just catalogue what exists. It maps what *should* exist. Gaps are first-class citizens. A contributor opening edugo can immediately see where the ecosystem needs them.
-
-**Frontend-only = DSGVO-safe by design.**  
-An app with no backend cannot exfiltrate data. edugo rewards this architecture with a visible trust badge — aligning the easiest thing to build with the safest thing to trust.
-
-**Quality signals, not certification.**  
-edugo doesn't approve tools. It makes quality visible: data safety status, evidence level, how many teachers have actually used it. Trust accumulates through use, not committees.
-
-**Fork and build.**  
-Every entry links to its source. Derivatives show their lineage. One weekend experiment by a teacher in Freiburg becomes the foundation for ten tools built by others. Ideas accumulate instead of disappearing.
-
-**Agentic creation, ecosystem-connected.**  
-Building a new educational tool starts from the capability map — not a blank page. edugo provides scaffolding, patterns, and starting points so that what gets built fills a real gap and fits the ecosystem from day one.
-
-**GitHub as backbone.**  
-The registry lives in structured files in this repo. Contributions are pull requests. The whole platform can be forked, audited, and run independently. This is not a constraint — it is the architecture we recommend for the tools we list.
-
----
+Contributing capability nodes and entries: [CONTRIBUTING.md](CONTRIBUTING.md) (German).
 
 ## Status
 
-Early. The idea is solid. The landing page comes first.
-
-If you're a teacher who has built something, an educator who wants to find something, or a developer who wants to build something — [open the platform](https://mrsimpson.github.io/edugo/) or [watch the repo](https://github.com/mrsimpson/edugo).
-
----
-
-## Structure of this repo
-
-```
-/data/capabilities  — The capability map (structured Markdown + YAML files)
-/data/entries       — The solution registry (structured Markdown + YAML files)
-/data/taxonomies    — Platform-owned controlled vocabularies (YAML)
-/schemas            — Zod v4 schema sources + generated JSON Schemas
-/scripts            — Validation and build scripts
-/docs               — Vision, contributing guide, arc42 architecture docs
-```
-
----
-
-> *"We are not dramatically behind. But we are not meeting our own standards as a nation of education."*  
-> — Samuel Greiff, PISA 2026 study director, TU Munich
+Moved from `mrsimpson/edugo` on 2026-09-27 with its history. The web app is still the edugo Vue SPA, which needs JavaScript. Whether the map moves to a static, JS-free stack is open: [lernapps/.github#24](https://github.com/lernapps/.github/issues/24).
