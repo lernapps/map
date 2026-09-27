@@ -10,7 +10,7 @@
 
 export const de = {
   nav: {
-    brand: 'lernapps',
+    brand: 'lernapps.net',
     catalog: 'Kompetenzkatalog',
     apps: 'Apps',
     github: 'GitHub',

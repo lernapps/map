@@ -16,7 +16,7 @@ import { test, expect } from '@playwright/test'
 test.describe('Root', () => {
   test('redirects to the catalog', async ({ page }) => {
     await page.goto('./')
-    await expect(page).toHaveTitle(/lernapps/i)
+    await expect(page).toHaveTitle(/lernapps\.net/i)
     await expect(page).toHaveURL(/#\/catalog/)
   })
 
