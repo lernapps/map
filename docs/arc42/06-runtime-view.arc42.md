@@ -143,45 +143,6 @@ sequenceDiagram
   GitHub-->>GitHub: Live site updated (typically under 2 min)
 ```
 
-## Scenario 4: Evaluator Reads Business Model Docs
-
-A foundation programme manager has been pointed to edugo and wants to understand the platform's
-scope, objectives, risks, and financial model before scheduling a call. They navigate to the
-business model section of the docs site and read through the biz42 chapters. The entire flow is
-static-page serving — no dynamic server involvement.
-
-```arc42
-:::runtime-scenario
-id: rs-evaluator-reads
-title: Evaluator reads the business model documentation
-trigger: Evaluator navigates to the business model docs to assess platform purpose and viability
-involves: bb-docs-site, bb-biz42-docs
-:::
-```
-
-```arc42
-:::diagram
-id: seq-evaluator-reads
-notation: mermaid-sequence
-scenario: rs-evaluator-reads
-aliases: bb_docs=bb-docs-site, bb_biz42=bb-biz42-docs
-:::
-```
-
-```mermaid
-sequenceDiagram
-  actor Evaluator
-  participant bb_docs as Docs Site
-  participant bb_biz42 as Business Model Docs
-
-  Evaluator->>bb_docs: GET /edugo/docs/ (static HTML served by GitHub Pages)
-  bb_docs-->>Evaluator: Docs site navigation rendered
-  Evaluator->>bb_biz42: Navigates to business model section
-  bb_biz42-->>Evaluator: Rendered scope, objectives, risks, products, financial model
-  Evaluator->>bb_biz42: Navigates between chapters (client-side routing)
-  bb_biz42-->>Evaluator: Chapter pages served statically
-```
-
 ## Scenario 5: Arc42 Reader Browses Architecture Docs
 
 An open-source contributor wants to understand the platform's building block structure before

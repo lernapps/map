@@ -14,7 +14,7 @@ data sources, and rendering concerns.
 id: bb-diagram
 view: building-block
 notation: mermaid
-aliases: bb_website=bb-website, bb_cap=bb-capability-map, bb_reg=bb-registry, bb_data=bb-data, bb_arc42=bb-arc42-docs, bb_biz42=bb-biz42-docs, bb_docs=bb-docs-site, bb_cicd=bb-cicd
+aliases: bb_website=bb-website, bb_cap=bb-capability-map, bb_reg=bb-registry, bb_data=bb-data, bb_arc42=bb-arc42-docs, bb_docs=bb-docs-site, bb_cicd=bb-cicd
 :::
 ```
 
@@ -27,7 +27,6 @@ graph TD
     bb_data["Data Layer\n(YAML + Markdown files)"]
     subgraph bb_docs["Docs Site"]
       bb_arc42["Architecture Guidelines & Docs"]
-      bb_biz42["Business Model Docs"]
     end
     bb_cicd["CI/CD Pipeline"]
   end
@@ -304,42 +303,6 @@ path: docs/arc42
 :::
 ```
 
-### Business Model Docs
-
-VitePress-rendered documentation covering the platform's scope, objectives, risks, products,
-and financial model (sourced from `docs/biz42/`). This building block is the strategic entry
-point for evaluators — partners, funders, and institutional adopters — who want to understand
-what edugo is, what it aims to achieve, how it is organised, and how it is financed before
-deciding to engage. Authored using the biz42 DSL and validated with the biz42 CLI.
-
-Responsibility: publish the platform's business model in a readable, navigable form; serve as
-the authoritative record of organisational scope, objectives, and financial model.
-
-```arc42
-:::building-block
-id: bb-biz42-docs
-title: Business Model Docs
-technology: VitePress, biz42 CLI (authoring and validation)
-path: docs/biz42
-parent: bb-docs-site
-:::
-```
-
-#### Interface: Business Model Documentation Read
-
-The strategic read interface consumed by evaluators who want to understand the platform's
-purpose, organisation, and financial model.
-
-```arc42
-:::interface
-id: if-business-model
-title: Business Model Documentation Read
-provider: bb-biz42-docs
-protocol: HTML (static VitePress pages)
-path: docs/biz42
-:::
-```
-
 ## CI/CD Pipeline
 
 The GitHub Actions workflows that validate, build, and deploy the platform on every push to
@@ -369,6 +332,6 @@ id: if-repo-push
 title: Repository Push / PR Event
 provider: bb-cicd
 protocol: GitHub Actions event (push, pull_request)
-path: .github/workflows/deploy.yml
+path: .github/workflows/pages.yml
 :::
 ```

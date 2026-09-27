@@ -15,7 +15,8 @@
     "typecheck": "vue-tsc --noEmit",
     "test:e2e": "playwright test",
     "test:e2e:local": "BASE_URL=http://localhost:4173/map/ playwright test",
-    "prepare": "husky"
+    "prepare": "husky",
+    "arc42:validate": "arc42 validate --strict"
   },
   "lint-staged": {
     "data/**/*.md": "tsx scripts/validate-data.ts",

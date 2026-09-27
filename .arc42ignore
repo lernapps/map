@@ -47,3 +47,6 @@ skills-lock.json
 # End-to-end tests and test runner config (test tooling, not deployable components)
 e2e
 playwright.config.ts
+
+# Contribution guide (claimed by no building block; human process documentation)
+CONTRIBUTING.md

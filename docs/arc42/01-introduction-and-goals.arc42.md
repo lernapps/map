@@ -4,6 +4,14 @@
 Arc42 chapter 1. The driving forces and requirements that shape the architecture of edugo.
 -->
 
+> **Status 2026-09-27.** This architecture was written for *edugo*, which is now *lernapps*. It still
+> describes the whole former edugo platform. Since then the platform has been split across repos
+> ([ORGANIZATION.md](https://github.com/lernapps/.github/blob/main/ORGANIZATION.md)): this repo is the
+> **map**. The home page lives in `lernapps.github.io`, and vision and business model live in
+> `lernapps/docs`. The landing page and the business-model building block have been removed from the
+> model. The rest still has to be narrowed to the map
+> ([lernapps/map#5](https://github.com/lernapps/map/issues/5)). "edugo" below means lernapps.
+
 ## 1.1 Requirements Overview
 
 edugo is the infrastructure layer that turns isolated educational micro-innovations into a coherent,
