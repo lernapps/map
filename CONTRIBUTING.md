@@ -1,4 +1,4 @@
-# Beitragen zur Karte von lernapps
+# Beitragen zur Karte von lernapps.net
 
 Die Karte lebt von Beiträgen aus der Praxis. Wenn du ein Lernergebnis kennst, das noch nicht auf der Karte ist, oder ein Tool, das eine Lücke füllt — leg einfach los. Du brauchst kein vollständiges Dossier. Ein guter erster Beitrag reicht.
 
@@ -130,4 +130,4 @@ VS Code: Das Repo enthält eine `.vscode/settings.json`, die YAML-Frontmatter in
 
 ---
 
-Allgemeine Regeln für alle Repositories von lernapps: [lernapps/.github](https://github.com/lernapps/.github/blob/main/CONTRIBUTING.md).
+Allgemeine Regeln für alle Repositories von lernapps.net: [lernapps/.github](https://github.com/lernapps/.github/blob/main/CONTRIBUTING.md).
