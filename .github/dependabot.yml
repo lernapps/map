@@ -11,3 +11,7 @@ updates:
     groups:
       all:
         patterns: ["*"]
+    ignore:
+      # vue-tsc supports TypeScript majors only after a delay; bump by hand.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
