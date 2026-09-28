@@ -31,3 +31,7 @@ Contributing capability nodes and entries: [CONTRIBUTING.md](CONTRIBUTING.md) (G
 ## Status
 
 Moved from `mrsimpson/edugo` on 2026-09-27 with its history. The web app is still the edugo Vue SPA, which needs JavaScript. Whether the map moves to a static, JS-free stack is open: [lernapps/.github#24](https://github.com/lernapps/.github/issues/24).
+
+## License
+
+[MIT](LICENSE), for the code and the texts in this repo. Contributions are made under the same license.
