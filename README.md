@@ -2,7 +2,7 @@
 
 The map of lernapps.net: what learners should be able to do (capability nodes), which learning apps help with it, and where apps are missing. Served at <https://lernapps.github.io/map/>.
 
-The map is the only place in lernapps that links to individual apps ([ORGANIZATION.md §3.3](https://github.com/lernapps/.github/blob/main/ORGANIZATION.md#33-how-apps-are-connected-by-link-from-the-map-nothing-else)).
+The map is the only place in lernapps that links to individual apps ([ORGANIZATION.md §3.3](https://github.com/lernapps/.github/blob/main/ORGANIZATION.md#rules-across-repos)).
 
 ## Contents
 
