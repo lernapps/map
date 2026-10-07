@@ -1,6 +1,6 @@
 # map
 
-> **Retired.** Finding apps has moved to [lernapps/apps](https://github.com/lernapps/apps), served at <https://lernapps.net/apps/>. `/map/` forwards there; the JSON Schemas stay at `/map/schemas/`. The capability nodes and the arc42 here are kept as material for later (where apps are missing).
+> **Retired.** Finding apps has moved to [lernapps/apps](https://github.com/lernapps/apps), served at <https://lernapps.net/apps/>. `/map/` forwards there. The entry format now lives in lernapps/apps (`schemas/entry.js`, published at <https://lernapps.net/apps/schemas/entry.v1.schema.json>); the schemas here are no longer published. The capability nodes and the arc42 here are kept as material for later (where apps are missing).
 
 The map of lernapps.net: what learners should be able to do (capability nodes), which learning apps help with it, and where apps are missing. Served at <https://lernapps.github.io/map/>.
 
