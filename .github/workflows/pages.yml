@@ -1,7 +1,9 @@
 name: Pages
 
-# Checks the map on every push and PR, deploys main to https://lernapps.github.io/map/.
-# Actions are pinned to full commit SHAs (org rule); Dependabot bumps them.
+# The map is retired: lernapps/apps (https://lernapps.net/apps/) replaces it for finding apps.
+# /map/ and every path below it forward to /apps/ (index.html, 404.html from redirect/).
+# The JSON Schemas stay published at /map/schemas/ for anyone who already references them.
+# Actions are pinned to full commit SHAs (same rule as mathe-karte, M-27); Dependabot bumps them.
 on:
   push:
     branches: [main]
@@ -20,23 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run typecheck
-      - run: npm run check-schemas
-      - run: npm run validate-data
-      - run: npm run build
-      - name: Validate and build the arc42 architecture (into dist/architecture/)
-        run: |
-          npx --yes @doctc/arc42@0.25.0 validate --strict
-          npx --yes @doctc/arc42@0.25.0 --dir docs/arc42 build --out dist/architecture --base /map/architecture/
-      - name: Publish JSON Schemas (into dist/schemas/)
+      - name: Assemble the redirect and the schemas (into dist/)
         run: |
           mkdir -p dist/schemas
+          cp redirect/index.html redirect/404.html dist/
           cp schemas/generated/*.json dist/schemas/
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         if: github.ref == 'refs/heads/main'
@@ -56,17 +45,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
-
-  smoke-test:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - name: Smoke tests against the live site
-        run: npx playwright test --reporter=github
